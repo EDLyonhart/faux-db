@@ -52,6 +52,7 @@ put '/users/:id' do
     if user[:id] == params[:id].to_i
       user[:first] = params[:first]
       user[:last] = params[:last]
+      @user = user #<-------- creates problems. can only edit top user but last user gets selected
     end
   end
 
